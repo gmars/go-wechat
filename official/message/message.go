@@ -61,7 +61,7 @@ func (m *Message) Handler(req *http.Request) (*ReplyMsg, error) {
 }
 
 // EncryptMessage 生成回复加密消息
-func (m *Message) EncryptMessage(msg, aesKey, token string) (string, error) {
+func (m *Message) EncryptMessage(msg string) (string, error) {
 	nonce, err := util.NonceStr(16)
 	if err != nil {
 		return "", err
@@ -69,7 +69,7 @@ func (m *Message) EncryptMessage(msg, aesKey, token string) (string, error) {
 
 	//aes加密
 	respMsg := nonce + string(util.Int32ToBytes(int32(len(msg)))) + msg + m.AppId
-	encryptor := util.AesCbcService{AesKey: aesKey}
+	encryptor := util.AesCbcService{AesKey: m.AesKey}
 	enMsg, err := encryptor.Encryption(&respMsg, true)
 	if err != nil {
 		return "", err
@@ -82,10 +82,10 @@ func (m *Message) EncryptMessage(msg, aesKey, token string) (string, error) {
 	}
 	timestamp := strconv.Itoa(int(time.Now().Unix()))
 	enMsgStr := util.BytesToString(enMsg)
-	signStr := m.generateSign(token, nonceStr, timestamp, enMsgStr)
+	signStr := m.generateSign(m.Token, nonceStr, timestamp, enMsgStr)
 
 	return fmt.Sprintf("<xml>\n<Encrypt><![CDATA[%s]]></Encrypt>\n<MsgSignature><![CDATA[%s]]></MsgSignature>\n<TimeStamp>%s</TimeStamp>\n<Nonce><![CDATA[%s]]></Nonce>\n</xml>",
-		string(enMsg), signStr, timestamp, nonceStr), nil
+		enMsgStr, signStr, timestamp, nonceStr), nil
 }
 
 // CheckServiceSignature 生成回复加密消息
