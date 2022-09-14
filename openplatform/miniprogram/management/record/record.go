@@ -1,6 +1,6 @@
 package record
 
-import "go-wechat/core"
+import "github.com/gmars/go-wechat/core"
 
 type Record struct {
 	request *core.ApiRequest

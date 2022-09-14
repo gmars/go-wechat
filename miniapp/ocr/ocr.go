@@ -1,7 +1,7 @@
 package ocr
 
 import (
-	"go-wechat/core"
+	"github.com/gmars/go-wechat/core"
 	"mime/multipart"
 )
 

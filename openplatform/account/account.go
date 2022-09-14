@@ -1,6 +1,6 @@
 package account
 
-import "go-wechat/core"
+import "github.com/gmars/go-wechat/core"
 
 type Account struct {
 	request *core.ApiRequest

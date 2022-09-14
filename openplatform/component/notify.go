@@ -3,8 +3,8 @@ package component
 import (
 	"context"
 	"fmt"
-	"go-wechat/core"
-	"go-wechat/official/message"
+	"github.com/gmars/go-wechat/core"
+	"github.com/gmars/go-wechat/official/message"
 	"net/http"
 )
 

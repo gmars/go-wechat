@@ -1,7 +1,7 @@
 package account
 
 import (
-	"go-wechat/core"
+	"github.com/gmars/go-wechat/core"
 	"unicode/utf8"
 )
 

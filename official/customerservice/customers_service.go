@@ -1,7 +1,7 @@
 package customerservice
 
 import (
-	"go-wechat/core"
+	"github.com/gmars/go-wechat/core"
 	"mime/multipart"
 	"regexp"
 	"unicode/utf8"

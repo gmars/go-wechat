@@ -1,15 +1,15 @@
 package management
 
 import (
-	"go-wechat/core"
-	"go-wechat/openplatform/miniprogram/management/basic_info"
-	"go-wechat/openplatform/miniprogram/management/category"
-	"go-wechat/openplatform/miniprogram/management/domain"
-	"go-wechat/openplatform/miniprogram/management/jumpqrcode"
-	"go-wechat/openplatform/miniprogram/management/member"
-	"go-wechat/openplatform/miniprogram/management/privacy"
-	"go-wechat/openplatform/miniprogram/management/record"
-	"go-wechat/openplatform/miniprogram/management/subscribe"
+	"github.com/gmars/go-wechat/core"
+	"github.com/gmars/go-wechat/openplatform/miniprogram/management/basic_info"
+	"github.com/gmars/go-wechat/openplatform/miniprogram/management/category"
+	"github.com/gmars/go-wechat/openplatform/miniprogram/management/domain"
+	"github.com/gmars/go-wechat/openplatform/miniprogram/management/jumpqrcode"
+	"github.com/gmars/go-wechat/openplatform/miniprogram/management/member"
+	"github.com/gmars/go-wechat/openplatform/miniprogram/management/privacy"
+	"github.com/gmars/go-wechat/openplatform/miniprogram/management/record"
+	"github.com/gmars/go-wechat/openplatform/miniprogram/management/subscribe"
 )
 
 type Management struct {

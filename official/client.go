@@ -1,8 +1,8 @@
 package official
 
 import (
-	"go-wechat/core"
-	"go-wechat/official/message"
+	"github.com/gmars/go-wechat/core"
+	"github.com/gmars/go-wechat/official/message"
 )
 
 type Options interface {

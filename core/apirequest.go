@@ -3,7 +3,7 @@ package core
 import (
 	"context"
 	"encoding/json"
-	"go-wechat/util"
+	"github.com/gmars/go-wechat/util"
 	"mime/multipart"
 )
 

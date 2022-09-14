@@ -1,10 +1,10 @@
 package official
 
 import (
-	"go-wechat/core"
-	"go-wechat/official/accesstoken"
-	"go-wechat/official/message"
-	"go-wechat/util"
+	"github.com/gmars/go-wechat/core"
+	"github.com/gmars/go-wechat/official/accesstoken"
+	"github.com/gmars/go-wechat/official/message"
+	"github.com/gmars/go-wechat/util"
 )
 
 type BaseConfig struct {

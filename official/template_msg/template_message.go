@@ -1,6 +1,6 @@
 package template_msg
 
-import "go-wechat/core"
+import "github.com/gmars/go-wechat/core"
 
 type TemplateMessage struct {
 	request *core.ApiRequest

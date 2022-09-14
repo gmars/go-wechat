@@ -1,18 +1,18 @@
 package official
 
 import (
-	"go-wechat/official/account"
-	"go-wechat/official/assetmanage"
-	"go-wechat/official/customerservice"
-	"go-wechat/official/draft"
-	"go-wechat/official/menu"
-	"go-wechat/official/message"
-	"go-wechat/official/openapi"
-	"go-wechat/official/subscription"
-	"go-wechat/official/template_msg"
-	"go-wechat/official/user"
-	"go-wechat/official/wxopen"
-	account2 "go-wechat/openplatform/account"
+	"github.com/gmars/go-wechat/official/account"
+	"github.com/gmars/go-wechat/official/assetmanage"
+	"github.com/gmars/go-wechat/official/customerservice"
+	"github.com/gmars/go-wechat/official/draft"
+	"github.com/gmars/go-wechat/official/menu"
+	"github.com/gmars/go-wechat/official/message"
+	"github.com/gmars/go-wechat/official/openapi"
+	"github.com/gmars/go-wechat/official/subscription"
+	"github.com/gmars/go-wechat/official/template_msg"
+	"github.com/gmars/go-wechat/official/user"
+	"github.com/gmars/go-wechat/official/wxopen"
+	account2 "github.com/gmars/go-wechat/openplatform/account"
 )
 
 // MessageHandler 消息处理器

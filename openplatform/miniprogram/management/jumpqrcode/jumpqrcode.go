@@ -1,8 +1,8 @@
 package jumpqrcode
 
 import (
-	"go-wechat/core"
-	"go-wechat/official/wxopen"
+	"github.com/gmars/go-wechat/core"
+	"github.com/gmars/go-wechat/official/wxopen"
 )
 
 type JumpQrcode struct {

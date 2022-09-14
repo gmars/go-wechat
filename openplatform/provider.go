@@ -1,15 +1,15 @@
 package openplatform
 
 import (
-	"go-wechat/core"
-	"go-wechat/official/message"
-	"go-wechat/openplatform/account"
-	"go-wechat/openplatform/authorization"
-	"go-wechat/openplatform/authorizer_token"
-	"go-wechat/openplatform/component"
-	"go-wechat/openplatform/miniprogram/login"
-	"go-wechat/openplatform/miniprogram/management"
-	"go-wechat/openplatform/thirdparty_management"
+	"github.com/gmars/go-wechat/core"
+	"github.com/gmars/go-wechat/official/message"
+	"github.com/gmars/go-wechat/openplatform/account"
+	"github.com/gmars/go-wechat/openplatform/authorization"
+	"github.com/gmars/go-wechat/openplatform/authorizer_token"
+	"github.com/gmars/go-wechat/openplatform/component"
+	"github.com/gmars/go-wechat/openplatform/miniprogram/login"
+	"github.com/gmars/go-wechat/openplatform/miniprogram/management"
+	"github.com/gmars/go-wechat/openplatform/thirdparty_management"
 )
 
 // Authorization 授权账号管理

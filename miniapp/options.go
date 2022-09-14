@@ -1,9 +1,9 @@
 package miniapp
 
 import (
-	"go-wechat/core"
-	"go-wechat/official/accesstoken"
-	"go-wechat/util"
+	"github.com/gmars/go-wechat/core"
+	"github.com/gmars/go-wechat/official/accesstoken"
+	"github.com/gmars/go-wechat/util"
 )
 
 type BaseConfig struct {

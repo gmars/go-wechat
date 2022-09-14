@@ -1,6 +1,6 @@
 package security
 
-import "go-wechat/core"
+import "github.com/gmars/go-wechat/core"
 
 type Security struct {
 	request *core.ApiRequest

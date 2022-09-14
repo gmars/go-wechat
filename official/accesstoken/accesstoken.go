@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"go-wechat/core"
-	"go-wechat/util"
+	"github.com/gmars/go-wechat/core"
+	"github.com/gmars/go-wechat/util"
 )
 
 type AccessToken struct {

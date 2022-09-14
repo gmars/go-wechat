@@ -1,6 +1,6 @@
 package member
 
-import "go-wechat/core"
+import "github.com/gmars/go-wechat/core"
 
 type Member struct {
 	request *core.ApiRequest

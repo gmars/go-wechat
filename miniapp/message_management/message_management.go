@@ -1,8 +1,8 @@
 package message_management
 
 import (
-	"go-wechat/core"
-	"go-wechat/official/subscription"
+	"github.com/gmars/go-wechat/core"
+	"github.com/gmars/go-wechat/official/subscription"
 )
 
 type MessageManagement struct {

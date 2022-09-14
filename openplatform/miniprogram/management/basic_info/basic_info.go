@@ -1,6 +1,6 @@
 package basic_info
 
-import "go-wechat/core"
+import "github.com/gmars/go-wechat/core"
 
 type BasicInfo struct {
 	request *core.ApiRequest

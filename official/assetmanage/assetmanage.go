@@ -3,8 +3,8 @@ package assetmanage
 import (
 	"bytes"
 	"encoding/json"
-	"go-wechat/core"
-	"go-wechat/util"
+	"github.com/gmars/go-wechat/core"
+	"github.com/gmars/go-wechat/util"
 	"mime/multipart"
 )
 

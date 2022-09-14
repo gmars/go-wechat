@@ -3,7 +3,7 @@ package component
 import (
 	"context"
 	"errors"
-	"go-wechat/core"
+	"github.com/gmars/go-wechat/core"
 )
 
 type AccessToken struct {

@@ -2,7 +2,7 @@ package draft
 
 import (
 	"fmt"
-	"go-wechat/core"
+	"github.com/gmars/go-wechat/core"
 )
 
 type ArticleItem struct {

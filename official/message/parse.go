@@ -3,7 +3,7 @@ package message
 import (
 	"encoding/xml"
 	"fmt"
-	"go-wechat/core"
+	"github.com/gmars/go-wechat/core"
 )
 
 // 开放平台info类消息解析器

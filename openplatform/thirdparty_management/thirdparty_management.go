@@ -1,6 +1,6 @@
 package thirdparty_management
 
-import "go-wechat/core"
+import "github.com/gmars/go-wechat/core"
 
 type ThirdPartyManagement struct {
 	request *core.ApiRequest

@@ -1,7 +1,7 @@
 package wxopen
 
 import (
-	"go-wechat/core"
+	"github.com/gmars/go-wechat/core"
 )
 
 type WxOpen struct {

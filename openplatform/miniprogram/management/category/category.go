@@ -1,6 +1,6 @@
 package category
 
-import "go-wechat/core"
+import "github.com/gmars/go-wechat/core"
 
 type Category struct {
 	request *core.ApiRequest

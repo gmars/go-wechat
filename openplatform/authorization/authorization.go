@@ -2,8 +2,8 @@ package authorization
 
 import (
 	"context"
-	"go-wechat/core"
-	"go-wechat/util"
+	"github.com/gmars/go-wechat/core"
+	"github.com/gmars/go-wechat/util"
 )
 
 type Authorization struct {

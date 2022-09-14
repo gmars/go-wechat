@@ -1,15 +1,15 @@
 package miniapp
 
 import (
-	"go-wechat/core"
-	"go-wechat/miniapp/dev"
-	"go-wechat/miniapp/kf_message"
-	"go-wechat/miniapp/message_management"
-	"go-wechat/miniapp/ocr"
-	"go-wechat/miniapp/qrcode_link"
-	"go-wechat/miniapp/security"
-	"go-wechat/miniapp/user_info"
-	"go-wechat/official/openapi"
+	"github.com/gmars/go-wechat/core"
+	"github.com/gmars/go-wechat/miniapp/dev"
+	"github.com/gmars/go-wechat/miniapp/kf_message"
+	"github.com/gmars/go-wechat/miniapp/message_management"
+	"github.com/gmars/go-wechat/miniapp/ocr"
+	"github.com/gmars/go-wechat/miniapp/qrcode_link"
+	"github.com/gmars/go-wechat/miniapp/security"
+	"github.com/gmars/go-wechat/miniapp/user_info"
+	"github.com/gmars/go-wechat/official/openapi"
 )
 
 // Code2Session 小程序登录

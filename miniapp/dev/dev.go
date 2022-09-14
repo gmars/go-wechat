@@ -2,7 +2,7 @@ package dev
 
 import (
 	"context"
-	"go-wechat/core"
+	"github.com/gmars/go-wechat/core"
 	"net/url"
 	"strconv"
 )

@@ -1,6 +1,6 @@
 package qrcode_link
 
-import "go-wechat/core"
+import "github.com/gmars/go-wechat/core"
 
 type QrcodeLink struct {
 	request *core.ApiRequest
