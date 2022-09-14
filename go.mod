@@ -1,4 +1,4 @@
-module go-wechat
+module github.com/gmars/go-wechat
 
 go 1.19
 
