@@ -21,11 +21,13 @@ func NewComponentAccessToken(appId, appSecret string, cache core.Cache) *AccessT
 }
 
 func (c *AccessToken) GetAccessToken(ctx context.Context) (string, error) {
-	token, err := c.Cache.GetData(ctx, c.GetCacheKey(ctx))
-	if err == nil {
-		return token, nil
+	token, _ := c.Cache.GetData(ctx, c.GetCacheKey(ctx))
+	if token == "" {
+		return c.RefreshAccessToken(ctx)
 	}
-	return c.RefreshAccessToken(ctx)
+
+	return token, nil
+
 }
 
 // RefreshAccessToken 刷新开放平台refresh access token
@@ -70,13 +72,13 @@ func (c *AccessToken) getComponentTicket(ctx context.Context) (string, error) {
 
 func (c *AccessToken) fetchComponentToken(ctx context.Context) (*ComAccessToken, error) {
 	var res ComAccessToken
-	ticket, err := c.getComponentTicket(ctx)
-	if err != nil {
-		return nil, err
+	ticket, _ := c.getComponentTicket(ctx)
+	if ticket == "" {
+		return nil, errors.New("component ticket not found")
 	}
 
 	req := core.NewApiRequest(nil)
-	_, err = req.JsonPost("/cgi-bin/component/api_component_token", nil, map[string]string{
+	_, err := req.JsonPost("/cgi-bin/component/api_component_token", nil, map[string]string{
 		"component_appid":         c.AppId,
 		"component_appsecret":     c.AppSecret,
 		"component_verify_ticket": ticket,

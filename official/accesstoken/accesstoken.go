@@ -5,7 +5,6 @@ import (
 	"errors"
 	"fmt"
 	"github.com/gmars/go-wechat/core"
-	"github.com/gmars/go-wechat/util"
 )
 
 type AccessToken struct {
@@ -24,14 +23,13 @@ func NewAccessToken(appId, appSecret string, cache core.Cache) *AccessToken {
 
 // GetAccessToken 获取access token
 func (a *AccessToken) GetAccessToken(ctx context.Context) (string, error) {
-	token, err := a.Cache.GetData(ctx, a.GetCacheKey(ctx))
-	if err != nil && (errors.Is(err, util.IsNotExist) || errors.Is(err, util.IsExpires)) {
+	token, _ := a.Cache.GetData(ctx, a.GetCacheKey(ctx))
+	if token == "" {
 		return a.RefreshAccessToken(ctx)
-	} else if err != nil {
-		return "", err
-	} else {
-		return token, nil
 	}
+
+	return token, nil
+
 }
 
 // RefreshAccessToken 刷新access token缓存

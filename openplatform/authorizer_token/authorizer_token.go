@@ -28,11 +28,11 @@ func NewAuthorizerToken(appId, refreshToken string, componentAccessToken core.Ac
 }
 
 func (a *AuthorizerToken) GetAccessToken(ctx context.Context) (string, error) {
-	token, err := a.cache.GetData(ctx, a.GetCacheKey(ctx))
-	if err == nil {
-		return token, nil
+	token, _ := a.cache.GetData(ctx, a.GetCacheKey(ctx))
+	if token == "" {
+		return a.RefreshAccessToken(ctx)
 	}
-	return a.RefreshAccessToken(ctx)
+	return token, nil
 }
 
 func (a *AuthorizerToken) RefreshAccessToken(ctx context.Context) (string, error) {

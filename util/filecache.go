@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"io"
 	"os"
 	"time"
@@ -50,6 +51,7 @@ func (f FileCache) SetData(ctx context.Context, key string, val string, expiresS
 		err = fh.Close()
 		if err != nil {
 			//TODO 记录日志
+			fmt.Printf("go-wechat 缓存数据写入出错：%s", err.Error())
 		}
 	}(fh)
 
@@ -84,6 +86,7 @@ func (f FileCache) GetData(ctx context.Context, key string) (string, error) {
 		err = fh.Close()
 		if err != nil {
 			//TODO 记录日志
+			fmt.Printf("go-wechat 获取缓存数据关闭文件句柄出错：%s", err.Error())
 		}
 	}(fh)
 
