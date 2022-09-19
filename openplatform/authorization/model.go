@@ -12,14 +12,16 @@ type FuncScopeCategory struct {
 	Desc string `json:"desC"`
 }
 
+type FuncInfoItem struct {
+	FuncScopeCategory FuncScopeCategory `json:"funcscope_category"`
+}
+
 type AuthorizationInfo struct {
-	AuthorizerAppid        string `json:"authorizer_appid"`
-	AuthorizerAccessToken  string `json:"authorizer_access_token"`
-	ExpiresIn              int    `json:"expires_in"`
-	AuthorizerRefreshToken string `json:"authorizer_refresh_token"`
-	FuncInfo               []struct {
-		FuncScopeCategory FuncScopeCategory `json:"funcscope_category"`
-	} `json:"func_info"`
+	AuthorizerAppid        string         `json:"authorizer_appid"`
+	AuthorizerAccessToken  string         `json:"authorizer_access_token"`
+	ExpiresIn              int            `json:"expires_in"`
+	AuthorizerRefreshToken string         `json:"authorizer_refresh_token"`
+	FuncInfo               []FuncInfoItem `json:"func_info"`
 }
 
 type MiniProgramInfo struct {
