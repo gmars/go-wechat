@@ -59,8 +59,8 @@ func (a *Authorization) GetAuthorizerList(page, pageSize int) (*AuthorizerInfoLi
 }
 
 // AuthorizerInfo 获取授权方的基本信息
-func (a *Authorization) AuthorizerInfo(authorizerAppid string) (*AuthorizerInfo, error) {
-	var res AuthorizerInfo
+func (a *Authorization) AuthorizerInfo(authorizerAppid string) (*AuthorizerRes, error) {
+	var res AuthorizerRes
 	_, err := a.request.JsonPost("/cgi-bin/component/api_get_authorizer_info", nil, map[string]interface{}{
 		"component_appid":  a.accessToken.GetCurrentAppid(context.Background()),
 		"authorizer_appid": authorizerAppid,

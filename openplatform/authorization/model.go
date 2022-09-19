@@ -88,3 +88,8 @@ type AuthorizerOption struct {
 	OptionName      string `json:"option_name"`
 	OptionValue     string `json:"option_value"`
 }
+
+type AuthorizerRes struct {
+	AuthorizerInfo    AuthorizerInfo    `json:"authorizer_info"`
+	AuthorizationInfo AuthorizationInfo `json:"authorization_info"`
+}
