@@ -6,10 +6,10 @@ type PreAuthCodeRes struct {
 }
 
 type FuncScopeCategory struct {
-	Id   int `json:"id"`
-	Type int `json:"type"`
-	Name int `json:"name"`
-	Desc int `json:"desC"`
+	Id   int    `json:"id"`
+	Type int    `json:"type"`
+	Name string `json:"name"`
+	Desc string `json:"desC"`
 }
 
 type AuthorizationInfo struct {
