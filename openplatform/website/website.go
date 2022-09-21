@@ -34,7 +34,7 @@ func (s *WebSite) GetLoginRedirectUrl(encodePath string, state string, lang Lang
 	}
 	query := snsUrl.Query()
 	query.Add("appid", s.appId)
-	query.Add("redirect_uri", url.QueryEscape(s.baseUrl)+encodePath)
+	query.Add("redirect_uri", s.baseUrl+encodePath)
 	query.Add("response_type", "code")
 	query.Add("scope", "snsapi_login")
 	query.Add("state", state)
@@ -51,7 +51,7 @@ func (s *WebSite) GetLoginParams(encodePath string, state string, style StyleTyp
 		Id:           "",
 		AppId:        s.appId,
 		Scope:        "snsapi_login",
-		RedirectUri:  url.QueryEscape(s.baseUrl) + encodePath,
+		RedirectUri:  s.baseUrl + encodePath,
 		State:        state,
 		Style:        style,
 		Href:         "",
