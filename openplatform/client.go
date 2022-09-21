@@ -10,6 +10,7 @@ type Options interface {
 }
 
 type Client struct {
+	componentAppId       string
 	cache                core.Cache
 	componentAccessToken core.AccessToken
 	messageHandler       *message.Message

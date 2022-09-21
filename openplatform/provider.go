@@ -12,6 +12,11 @@ import (
 	"github.com/gmars/go-wechat/openplatform/thirdparty_management"
 )
 
+// GetComponentAppId 获取当前开放平台appid
+func (c *Client) GetComponentAppId() string {
+	return c.componentAppId
+}
+
 // Authorization 授权账号管理
 func (c *Client) Authorization() *authorization.Authorization {
 	return authorization.NewAuthorization(c.componentAccessToken)

@@ -50,6 +50,7 @@ func (a *AutoAccessTokenConfig) Apply(c *Client) error {
 		cache = a.Cache
 	}
 	c.cache = cache
+	c.componentAppId = a.AppId
 	c.componentAccessToken = component.NewComponentAccessToken(a.AppId, a.AppSecret, cache)
 	return nil
 }
